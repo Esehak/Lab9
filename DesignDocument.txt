@@ -1,0 +1,25 @@
+My NoSql Design Model
+Book
+
+{
+_id: 'ISBN',
+'authorName':'cretsos',
+'category':['computerScience','physic','Engineering'],
+'BorrowedDate':'09/23/2017',
+'returnDate':'09/27/2017',
+Students:[{name:'user1', student_id:'43563'}]
+
+}
+
+Librarian 
+ 
+ {
+ _id:"LibraryianId",
+ name:"John",
+ password:"johnpassword"
+ 
+ }
+
+ SuggestedIndex
+
+ db.Book.createIndex({ISBN:1},{unique:true, sparse:true})

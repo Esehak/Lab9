@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <% if(success == true){ %>
+        <div class="alert alert-success" role="alert">
+           <h3> Operation done successfully!</h3>
+        </div>
+    <% } %>
+
+    <h2> Location List </h2> 
+    <% if (location) { %>
+      <table class="table">
+        <thead>
+        
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><%= location.name %></td>
+              <td><%= location.category %></td>
+              <td><%= location.Longitude + ', ' + location.Latitude %></td>
+              
+            </tr>
+          
+        </tbody> 
+      </table>
+    <% } else{ %>
+        <hr />
+        <p> No record found!</p>
+    <% } %>
+  </body>
+</html>
